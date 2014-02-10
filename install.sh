@@ -8,9 +8,11 @@ echo '[Update Ubuntu Server]'
 apt-get update
 
 echo '[Prepare environment]'
-apt-get install -y php5 php5-cli php5-xdebug php5-mysql phpunit php-apc php5-imagick 
+apt-get install -y php5 php5-cli php5-mysql phpunit php-apc php5-imagick 
+apt-get install -y php5-sqlite
 apt-get install -y mysql-server curl imagemagick php5-dev php5-curl 
-apt-get install -y libapache2-mod-php5 apache2 git-core build-essential
+apt-get install -y libapache2-mod-php5 apache2 git-core subversion nfs-common portmap
+#apt-get install -y php5-xdebug php5-memcache php5-suhosin php5-mcryptphp-pear build-essential
 
 echo '[Setup vagrant folder]'
 rm -rf /var/www
